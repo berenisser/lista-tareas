@@ -61,13 +61,9 @@ var datos = [
   }
 ];
 
+
 var espacioLista = document.getElementById('espacio-lista');
 datos.forEach(function(el){
-	espacioLista.innerHTML += el.title + "<br>";
-});
-
-var espacioLista2 = document.getElementById('espacio-lista2');
-datos.forEach(function(el){
-	espacioLista2.innerHTML += el.title;
+	espacioLista.innerHTML +=  "<ul><li>" + el.title + "</li></ul>" 
 });
 
