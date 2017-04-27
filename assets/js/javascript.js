@@ -68,7 +68,8 @@ datos.forEach(function(el){
 
 function agregarTarea(){
 	var valorTarea = document.getElementById('nueva-tarea').value;
-	espacioLista.innerHTML += "<li>" + valorTarea + "</li>";
+	var espacioEditable = document.getElementById('editable');
+	espacioEditable.innerHTML += "<li>" + valorTarea + "</li>";
 
 	function DatoNuevo(valorTarea){
     this.completed = false;
@@ -80,10 +81,8 @@ function agregarTarea(){
 	return datos.push(res);	
 }
 
-var valorTarea = document.getElementById('nueva-tarea').value;
-
-
-
-
-
-console.log(datos.length);
+function guardarCambios() {
+var editElem = document.getElementById("editable");
+var usuarioVersion = editElem.innerHTML;
+localStorage.userEdits = usuarioVersion;
+}

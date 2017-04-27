@@ -9,9 +9,14 @@
 	<div>
 		<ul id="espacio-lista"></ul>
 	</div>
+	<div contenteditable="true">
+		<ul id="editable"></ul>
+	</div>
 
 	<label for="nueva-tarea">Añadir nueva tarea</label>
 	<input type="text" id="nueva-tarea"><button onclick="agregarTarea()">Añadir</button>
+	<p>*Para editar tu nueva tarea dale un click y dale click al boton de Guardar cambios</p>
+	<input type="button" value="Guardar Cambios" onclick="guardarCambios()"/>
 	
 	<script src="assets/js/javascript.js"></script>
 </body>
