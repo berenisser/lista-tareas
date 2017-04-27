@@ -64,6 +64,12 @@ var datos = [
 
 var espacioLista = document.getElementById('espacio-lista');
 datos.forEach(function(el){
-	espacioLista.innerHTML +=  "<ul><li>" + el.title + "</li></ul>" 
+	espacioLista.innerHTML +=  "<ul><li>" + el.title + "</li></ul>"; 
 });
+
+
+function agregarTarea(){
+	var valorTarea = document.getElementById('nueva-tarea').value;
+	espacioLista.innerHTML += "<ul><li>" + valorTarea + "</li></ul>";
+}
 
