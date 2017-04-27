@@ -61,15 +61,29 @@ var datos = [
   }
 ];
 
-
 var espacioLista = document.getElementById('espacio-lista');
 datos.forEach(function(el){
-	espacioLista.innerHTML +=  "<ul><li>" + el.title + "</li></ul>"; 
+	espacioLista.innerHTML +=  "<li>" + el.title + "</li>"; 
 });
-
 
 function agregarTarea(){
 	var valorTarea = document.getElementById('nueva-tarea').value;
-	espacioLista.innerHTML += "<ul><li>" + valorTarea + "</li></ul>";
+	espacioLista.innerHTML += "<li>" + valorTarea + "</li>";
+
+	function DatoNuevo(valorTarea){
+    this.completed = false;
+    this.id = datos.length;
+    this.title = valorTarea;
+    this.userId = 1;
+	}
+	var res = new DatoNuevo(valorTarea);
+	return datos.push(res);	
 }
 
+var valorTarea = document.getElementById('nueva-tarea').value;
+
+
+
+
+
+console.log(datos.length);
